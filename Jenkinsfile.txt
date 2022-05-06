@@ -1,10 +1,4 @@
-pipeline {
-    agent any
-    stages {
-        stage("Hola") {
-            steps {
-                echo 'Hola Mundo'
-            }
-        }
-    }
+node {
+    git url: 'https://github.com'
+    sh 'make all'
 }
